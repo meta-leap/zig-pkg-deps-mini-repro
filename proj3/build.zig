@@ -16,9 +16,9 @@ const lib3 = std.build.Pkg{
 };
 
 fn addPackageDepsTo(it: *std.build.LibExeObjStep) void {
-    it.addPackage(lib1);
-    it.addPackage(lib2);
     it.addPackage(lib3);
+    it.addPackage(lib2);
+    it.addPackage(lib1);
 }
 
 pub fn build(bld: *std.build.Builder) void {
